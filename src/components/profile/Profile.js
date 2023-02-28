@@ -17,6 +17,7 @@ function Profile() {
             <img src={avamin} alt="mini-profile-photo" />
             <span>Elon Musk</span>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod earum recusandae labore fugit quasi. Culpa sunt, exercitationem quia eum, voluptatibus mollitia vitae perferendis libero maiores tenetur veritatis quasi quam saepe?</p>
+            <p>Helllo Helllo Helllo Helllo</p>
           </div>
         </div>
       </div>
