@@ -10,8 +10,8 @@ function App() {
       <Header />
 
       <NavBar />
-
-      <Profile />
+      
+      <Profile name={"Elon Musk"}/>
     </div>
   );
 }
