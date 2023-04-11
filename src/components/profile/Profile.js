@@ -11,8 +11,8 @@ function Profile(props) {
         <img src={ava} alt="profile-photo" />
         <p>{props.name}</p>
       </div>
-      <Posts message={props.message}/>
-      
+      <Posts />
+      {/* message={props.message} */}
     </div>
 
   )

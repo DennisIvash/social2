@@ -11,7 +11,6 @@ function Posts() {
             <Post message="Im Elon Musk"/>
             <Post message="Give me some bitcoin"/>
             <Post message="I will be happy"/>
-            <Post />
             
         </div>
     )
