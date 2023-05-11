@@ -1,0 +1,12 @@
+.navbar a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.navbar a:hover {
+    background-color: #fff9;
+}

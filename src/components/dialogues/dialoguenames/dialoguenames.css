@@ -1,0 +1,11 @@
+.dialoguenames a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: 16px 0;
+    padding: 5px 0;
+}
+
+.dialoguenames a:hover {
+    color: gray;
+}

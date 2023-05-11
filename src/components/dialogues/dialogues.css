@@ -1,0 +1,23 @@
+.dialogues {
+    width: 70%;
+    margin: auto;
+}
+
+.dialoguemessages {
+    width: 80%;
+}
+
+.dialoguemessages p {
+    background-color: rgb(142, 103, 103);
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.dialoguenames {
+    width: 20%;
+}
+
+.dialogueitems {
+    display: flex;
+    
+}
