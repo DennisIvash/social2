@@ -16,7 +16,7 @@ function App(props) {
           <Routes>
             <Route exact path='/' element={<Profile name={'Elon Musk'} postsData={props.state.profilePage} addPost={props.addPost} /> } />
             <Route exact path='/profile' element={<Profile name={'Elon Musk'} postsData={props.state.profilePage} addPost={props.addPost} /> } />
-            <Route exact path='/dialogues' element= {<Dialogues dialogueData={props.state.dialoguePage} /> } />
+            <Route exact path='/dialogues' element= {<Dialogues dialogueData={props.state.dialoguePage} addMessage={props.addMessage} /> } />
           </Routes>
         </div>
       </BrowserRouter>

@@ -2,12 +2,12 @@ import React from "react";
 
 let postText = React.createRef();
 
-let addPost = (props) => {
-    props.addPost(postText.current.value)
-    // console.log(postText.current.value);
-}
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+    let addPost = () => {
+        props.addPost(postText.current.value)
+        postText.current.value = '';
+    }
     return (
         <div className="profile">
             <h2>My Posts</h2>
