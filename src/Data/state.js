@@ -1,4 +1,3 @@
-import rerenderTree from "../render"
 
 let state = {
     profilePage: {
@@ -6,6 +5,7 @@ let state = {
             { message: 'Hi!', id: 1, like: 2 },
             { message: 'I am Elon Mask', id: 2, like: 4 },
         ],
+        newPostText: ''
     },
     dialoguePage: {
         dialogueMsgs: [
@@ -18,7 +18,15 @@ let state = {
             { name: 'Peter Ivanov', id: 2 },
             { name: 'Fedar Ivanov', id: 3 },
         ],
+        newMessageText: ''
     }
+}
+let rerenderTree = () => {
+    console.log('Fake Function');
+}
+
+export let subscribe = (observer) => {
+    rerenderTree = observer
 }
 
 export let addPost = (text) => {
@@ -28,6 +36,7 @@ export let addPost = (text) => {
         like: 2,
     }
     state.profilePage.postMsgs.unshift(newPost)
+    state.profilePage.newPost = ''
     rerenderTree(state)
 }
 
@@ -40,4 +49,15 @@ export let addMessage = (text) => {
     rerenderTree(state)
 }
 
+export let onPostChange = (text) => {
+    state.profilePage.newPostText = text
+    rerenderTree(state)
+}
+
+export let onMessageChange = (text) => {
+    state.dialoguePage.newMessageText = text
+    rerenderTree(state)
+}
+
+window.state = state
 export default state

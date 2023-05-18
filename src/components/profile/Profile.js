@@ -10,7 +10,7 @@ function Profile(props) {
                 <img src={avatar} alt="Elon Musk" />
                 <p>{props.name}</p>
             </div>
-            <Posts name={props.name} postMsgs={props.postsData.postMsgs} addPost={props.addPost} />
+            <Posts name={props.name} postMsgs={props.postsData.postMsgs} addPost={props.addPost} newPostText={props.newPostText} onPostChange={props.onPostChange} />
             
         </div>
     )

@@ -6,6 +6,10 @@ import DialogueNames from "./dialoguenames/DialogueNames";
 let messageText = React.createRef();
 
 function Dialogues(props) {
+    let onMessageChange = () => {
+        props.onMessageChange(messageText.current.value)
+        console.log(props);
+    }
     let addMessage = () => {
         props.addMessage(messageText.current.value)
         messageText.current.value = '';
@@ -18,7 +22,7 @@ function Dialogues(props) {
                 <DialogueNames dialogueNames={props.dialogueData.dialogueNames} />
                 <DialogueMessages dialogueMsgs={props.dialogueData.dialogueMsgs} />
             </div>
-            <input ref={messageText} type="text" />
+            <input onChange={onMessageChange} value={props.newMessageText} ref={messageText} type="text" placeholder="Enter a Message"/>
             <button onClick={addMessage}>Send</button>
         </div>
     )

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <script>
+        let car = {
+            label: 'BMW',
+            model: 'X5',
+            color: 'Grey',
+            sayColor() {
+                console.log(this.color);
+            }
+
+        }
+        let page = {
+            _content: '',
+            setContent(content) {
+                this._content = content
+            },
+            getContent() {
+                return document.querySelector('body').innerHTML = this._content
+            }
+        }
+        page.setContent('<p>Hello World</p>')
+        page.getContent()
+    </script>
+</body>
+</html>
