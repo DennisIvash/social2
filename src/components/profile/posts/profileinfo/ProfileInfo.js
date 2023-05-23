@@ -4,10 +4,13 @@ let postText = React.createRef();
 
 const ProfileInfo = (props) => {
     let onPostChange = () => {
-        props.onPostChange(postText.current.value)
+        props.dispatch({
+            type: 'POST-CHANGE',
+            text: postText.current.value
+        })
     }
     let addPost = () => {
-        props.addPost(postText.current.value)
+        props.dispatch({ type: 'ADD-POST' })
         postText.current.value = '';
     }
     return (

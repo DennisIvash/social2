@@ -14,9 +14,23 @@ function App(props) {
         <Navbar />
         <div className="wrapper-content">
           <Routes>
-            <Route exact path='/' element={<Profile name={'Elon Musk'} postsData={props.state.profilePage} addPost={props.addPost} newPostText={props.state.profilePage.newPostText} onPostChange={props.onPostChange} /> } />
-            <Route exact path='/profile' element={<Profile name={'Elon Musk'} postsData={props.state.profilePage} addPost={props.addPost} newPostText={props.state.profilePage.newPostText} onPostChange={props.onPostChange} /> } />
-            <Route exact path='/dialogues' element= {<Dialogues dialogueData={props.state.dialoguePage} addMessage={props.addMessage} newMessageText={props.state.dialoguePage.newMessageText} onMessageChange={props.onMessageChange} /> } />
+            <Route exact path='/' element={
+              <Profile
+                name={'Elon Musk'}
+                postsData={props.state.profilePage}
+                newPostText={props.state.profilePage.newPostText}
+                dispatch={props.dispatch} />} />
+            <Route exact path='/profile' element={
+              <Profile
+                name={'Elon Musk'}
+                postsData={props.state.profilePage}
+                dispatch={props.dispatch}
+                newPostText={props.state.profilePage.newPostText} />} />
+            <Route exact path='/dialogues' element={
+              <Dialogues
+                dialogueData={props.state.dialoguePage}
+                newMessageText={props.state.dialoguePage.newMessageText}
+                dispatch={props.dispatch} />} />
           </Routes>
         </div>
       </BrowserRouter>

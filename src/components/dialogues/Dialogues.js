@@ -7,11 +7,10 @@ let messageText = React.createRef();
 
 function Dialogues(props) {
     let onMessageChange = () => {
-        props.onMessageChange(messageText.current.value)
-        console.log(props);
+        props.dispatch({type: 'MESSAGE-CHANGE', text: messageText.current.value})
     }
     let addMessage = () => {
-        props.addMessage(messageText.current.value)
+        props.dispatch({type: 'ADD-MESSAGE'})
         messageText.current.value = '';
 
     }
