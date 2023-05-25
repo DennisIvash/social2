@@ -1,5 +1,5 @@
 import React from "react";
-import { addPostAC, onPostChangeAC } from "../../../../Data/state";
+import { addPostAC, onPostChangeAC } from "../../../../Data/profileReducer";
 
 let postText = React.createRef();
 
