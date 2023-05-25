@@ -1,16 +1,14 @@
 import React from "react";
+import { addPostAC, onPostChangeAC } from "../../../../Data/state";
 
 let postText = React.createRef();
 
 const ProfileInfo = (props) => {
     let onPostChange = () => {
-        props.dispatch({
-            type: 'POST-CHANGE',
-            text: postText.current.value
-        })
+        props.dispatch(onPostChangeAC(postText.current.value))
     }
     let addPost = () => {
-        props.dispatch({ type: 'ADD-POST' })
+        props.dispatch(addPostAC())
         postText.current.value = '';
     }
     return (

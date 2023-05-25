@@ -2,15 +2,17 @@ import React from "react";
 import './dialogues.css'
 import DialogueMessages from "./dialoguemessages/DialogueMessages";
 import DialogueNames from "./dialoguenames/DialogueNames";
+import { addMessageAC, onMessageChangeAC } from "../../Data/state";
+
 
 let messageText = React.createRef();
 
 function Dialogues(props) {
     let onMessageChange = () => {
-        props.dispatch({type: 'MESSAGE-CHANGE', text: messageText.current.value})
+        props.dispatch(onMessageChangeAC(messageText.current.value))
     }
     let addMessage = () => {
-        props.dispatch({type: 'ADD-MESSAGE'})
+        props.dispatch(addMessageAC())
         messageText.current.value = '';
 
     }
