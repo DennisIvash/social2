@@ -10,7 +10,7 @@ let profileReducer = (action, state) => {
             like: 2,
         }
         state.postMsgs.unshift(newPost)
-        state.newPost = ''
+        state.newPostText = ''
     } else if (action.type == POST_CHANGE) {
         state.newPostText = action.text
     }

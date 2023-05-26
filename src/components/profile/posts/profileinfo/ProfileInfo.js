@@ -9,7 +9,7 @@ const ProfileInfo = (props) => {
     }
     let addPost = () => {
         props.dispatch(addPostAC())
-        postText.current.value = '';
+        // postText.current.value = '';
     }
     return (
         <div className="profile">

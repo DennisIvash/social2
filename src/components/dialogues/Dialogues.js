@@ -2,7 +2,7 @@ import React from "react";
 import './dialogues.css'
 import DialogueMessages from "./dialoguemessages/DialogueMessages";
 import DialogueNames from "./dialoguenames/DialogueNames";
-import { addMessageAC, onMessageChangeAC } from "../../Data/state";
+import { addMessageAC, onMessageChangeAC } from "../../Data/dialogueReducer";
 
 
 let messageText = React.createRef();
@@ -13,7 +13,7 @@ function Dialogues(props) {
     }
     let addMessage = () => {
         props.dispatch(addMessageAC())
-        messageText.current.value = '';
+        // messageText.current.value = '';
 
     }
     return (
