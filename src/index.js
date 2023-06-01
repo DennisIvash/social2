@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import store from './Data/state';
+import store from './Data/store';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
@@ -19,7 +19,10 @@ let rerenderTree = (state) => {
 }
 
 rerenderTree(store.getState())
-store.subscribe(rerenderTree)
+store.subscribe(() => {
+    rerenderTree(store.getState())
+
+})
 // export default rerenderTree;
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

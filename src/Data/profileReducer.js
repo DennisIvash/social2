@@ -1,7 +1,15 @@
 const ADD_POST = 'ADD-POST'
 const POST_CHANGE = 'POST-CHANGE'
 
-let profileReducer = (action, state) => {
+let initialState = {
+    postMsgs: [
+        { message: 'Hi!', id: 1, like: 2 },
+        { message: 'I am Elon Mask', id: 2, like: 4 },
+    ],
+    newPostText: ''
+}
+
+let profileReducer = (state=initialState, action) => {
 
     if (action.type == ADD_POST) {
         let newPost = {
